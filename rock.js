@@ -17,6 +17,8 @@ if playerSelection == papper and computer selection == rock
 
 
 */
+
+let result;
 function computerPlay() {
     let computerOption = ['rock', 'papper', 'scissors'];
     let choice = Math.floor(Math.random() * computerOption.length);
@@ -25,7 +27,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        let  result = `${playerSelection} against ${computerSelection}. Game Drawn`;
+        result = `${playerSelection} against ${computerSelection}. Game Drawn`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         result = `You Win. ${playerSelection} beats ${computerSelection}`;
     } else if (playerSelection === 'rock' && computerSelection === 'papper'){
