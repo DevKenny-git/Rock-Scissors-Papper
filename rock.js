@@ -17,6 +17,8 @@ if playerSelection == papper and computer selection == rock
 
 
 */
+const output = document.querySelector("#result")
+const play = document.querySelector('#play')
 
 let result;
 function computerPlay() {
@@ -45,9 +47,14 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
+    play.addEventListener('click', () => {
+        const playerSelection = prompt("Enter either of 'Rock, Papper or Scissors': ").toLowerCase();
+        const computerSelection = computerPlay();
+        const game = `<h3>${playRound(playerSelection, computerSelection)}</h3>`;
+        output.innerHTML = game;
+    }) 
+        
+        
+    
 
-for (i = 0; i < 5; i++) {
-    const playerSelection = prompt("Enter either of 'Rock, Papper or Scissors': ").toLowerCase();
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-}
+        
