@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
         const playerSelection = prompt("Enter either of 'Rock, Papper or Scissors': ").toLowerCase();
         const computerSelection = computerPlay();
         const game = `<h3>${playRound(playerSelection, computerSelection)}</h3>`;
-        output.innerHTML = game;
+        output.innerHTML = game
     }) 
         
         
